@@ -32,9 +32,7 @@ y_pred=model.predict(X_test)
 model.save('modelsave.h5')
 
 history = model.history.history
-acc = history["acc"][-1] * 100
-accuracy = str("{:.2f}".format(acc))
-
+accuracy = history["acc"][-1] * 100
 with open('accuracy.txt', 'w') as f:
-    f.write(accuracy)
+    f.write('%d' % accuracy)
 
