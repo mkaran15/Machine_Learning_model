@@ -31,6 +31,7 @@ y_pred=model.predict(X_test)
 
 model.save('modelsave.h5')
 
+
 history = model.history.history
 accuracy = history["acc"][-1] * 100
 
