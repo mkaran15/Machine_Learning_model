@@ -33,4 +33,6 @@ model.save('modelsave.h5')
 
 history = model.history.history
 accuracy = history["acc"][-1] * 100
-print("\nAccuracy of this model is {}% .\n".format(accuracy))
+with open('accuracy.txt', 'w') as f:
+    f.write(accuracy)
+
