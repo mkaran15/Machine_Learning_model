@@ -24,7 +24,7 @@ model.add(Dense(units=2, activation='relu'))
 model.add(Dense(units=3, activation='softmax'))
 model.compile(optimizer=Adam(lr=0.01),loss='categorical_crossentropy', metrics=['accuracy'])
 
-model.fit(X_train,y_train,epochs=7)
+model.fit(X_train,y_train,epochs=5)
 
 X_test=sc.transform(X_test)
 y_pred=model.predict(X_test)
